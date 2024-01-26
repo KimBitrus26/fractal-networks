@@ -1,4 +1,3 @@
-# shop_secure
 
 ## Fractal Networks
 
@@ -33,19 +32,17 @@ Visit the project Repository on Github Website:
 
 create an environment variable file .env in the root directory and paste below:
 
-`
-DJANGO_SECRET_KEY=eahc9fal9n5%!s9h-k%@5ecz=j@5ikxhnokd2e8n21^\)I\)^fnzBGFE
+- DJANGO_SECRET_KEY=eahc9fal9n5%!s9h-k%@5ecz=j@5ikxhnokd2e8n21^\)I\)^fnzBGFE
 
-DEBUG=TRUE
-USE_S3=TRUEno
-USE_LOCAL_DB=TRUEno
+- DEBUG=TRUE
+- USE_S3=TRUEno
+- USE_LOCAL_DB=TRUEno
+- POSTGRES_DB=postgres
+- POSTGRES_USER=postgresuser
+- POSTGRES_PASSWORD=supersecretevaluation
+- DB_HOST=db
+- DB_PORT=5432
 
-POSTGRES_DB=postgres
-POSTGRES_USER=postgresuser
-POSTGRES_PASSWORD=supersecretevaluation
-DB_HOST=db
-DB_PORT=5432
-`
 
 ### Installing Django and other dependencies
 
