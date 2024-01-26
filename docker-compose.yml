@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+
+  db:
+    image: kartoza/postgis:12.1 # pulling postgis image from Docker hub
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    
+    env_file:
+      - .env
+
+  backend:
+    build: .
+    volumes:
+      - .:/home/evaluation
+      - static_volume:/home/evaluation/static
+      - media_volume:/home/evaluation/media
+    ports:
+      - '8000:8000'
+    env_file:
+      - .env
+
+    restart: on-failure
+    
+    depends_on:
+      - db
+
+volumes:
+  pg_data:
+  static_volume:
+  media_volume:
+  
